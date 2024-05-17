@@ -1,0 +1,122 @@
+:root {
+  /* Primary */
+  --Dark-Cyan: hsl(179, 81%, 29%);
+  --Dark-Grey-Blue: hsl(215, 19%, 25%);
+  --Pale-Orange: hsl(25, 94%, 86%);
+  /* Neutral */
+  --White: hsl(0, 100%, 100%);
+  --Light-Cream: hsl(43, 78%, 98%);
+  --Grey: hsl(215, 5%, 54%);
+  --Black: hsl(0, 100%, 1%);
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Reuseable components */
+.hidden {
+  display: none;
+}
+
+.border-red {
+  border: 2px solid #ff0000;
+}
+
+.border-blue {
+  border: 2px solid #0800ff;
+}
+
+.border-green {
+  border: 2px solid #00ff1a;
+}
+
+.border-purple {
+  border: 1px solid #9900ff;
+}
+
+/* Body */
+body {
+  background-color: var(--Light-Cream);
+  padding: 32px 24px 72px;
+}
+
+/* Header */
+.header__navagation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__navagation--menu {
+  align-self: center;
+}
+
+.logo {
+  align-self: center;
+}
+
+.logo img {
+  width: 10.188rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .logo img {
+    width: 12.688rem;
+  }
+
+  .header__navagation--menu {
+    display: none;
+  }
+
+  .header__navagation--links {
+    display: block;
+  }
+
+  .header__navagation--links ul {
+    display: flex;
+    gap: 2rem;
+  }
+}
